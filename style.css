@@ -1,1 +1,14 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend+Deca&display=swap");
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 12%);
+  color: white;
+} /*# sourceMappingURL=style.css.map */

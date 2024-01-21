@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend+Deca&display=swap");
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+// VARIABLES
+
+$font-family--main: "Inter", "Times New Roman", sans-serif;
+
+$font-weight--light: 400;
+$font-weight--medium: 600;
+$font-weight--bold: 700;
+
+$color-font--accents: hsl(75, 94%, 57%);
+
+$color-background--body: hsl(0, 0%, 8%);
+$color-background--card: hsl(0, 0%, 12%);
+$color-background--button: hsl(0, 0%, 20%);
+
+//BASE
+
+body {
+  background-color: $color-background--body;
+}
+
+.card {
+  background-color: $color-background--card;
+  color: white;
+}
