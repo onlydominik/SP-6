@@ -9,23 +9,114 @@ html {
 
 $font-family--main: "Inter", "Times New Roman", sans-serif;
 
+$font-size--heading: 1.5rem;
+$font-size--accents: 0.9rem;
+$font-size--paragraph: 0.9rem;
+
 $font-weight--light: 400;
 $font-weight--medium: 600;
 $font-weight--bold: 700;
 
 $color-font--accents: hsl(75, 94%, 57%);
+$color-font--main: hsl(0, 0%, 100%);
+$color-font--paragraph: hsla(0, 0%, 100%, 0.619);
+$color-font--dark: hsl(0, 0%, 8%);
 
 $color-background--body: hsl(0, 0%, 8%);
 $color-background--card: hsl(0, 0%, 12%);
 $color-background--button: hsl(0, 0%, 20%);
+$color-background--accents: hsl(75, 94%, 57%);
 
 //BASE
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   background-color: $color-background--body;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: $font-family--main;
+  text-align: center;
 }
 
 .card {
   background-color: $color-background--card;
   color: white;
+  border-radius: 15px;
+}
+
+img {
+  border-radius: 50%;
+  width: 6rem;
+}
+
+.data__name {
+  font-weight: $font-weight--light;
+  font-size: $font-size--heading;
+}
+
+.data__location {
+  color: $color-font--accents;
+  font-weight: $font-weight--medium;
+  margin-top: -10px;
+  font-size: $font-size--accents;
+}
+
+.data__description {
+  font-size: $font-size--paragraph;
+  color: $color-font--paragraph;
+  margin-bottom: 25px;
+}
+
+.links {
+  gap: 15px;
+}
+
+.links__btn {
+  background-color: $color-background--button;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  color: $color-font--main;
+  font-weight: $font-weight--medium;
+  font-size: $font-size--paragraph;
+}
+
+.links__btn:hover {
+  background-color: $color-background--accents;
+  color: $color-font--dark;
+  transition: all 100ms;
+}
+
+.links__btn:hover {
+  cursor: pointer;
+}
+
+//MOBILE
+
+.card {
+  width: clamp(350px, 50%, 350px);
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.links__btn {
+  width: 85%;
+}
+
+//DESKTOP
+
+@media (min-width: 768px) {
+  .card {
+    width: clamp(350px, 30%, 400px);
+    padding: 2rem 0 2rem 0;
+  }
+
+  .links__btn {
+    width: clamp(100px, 85%, 82%);
+  }
 }
